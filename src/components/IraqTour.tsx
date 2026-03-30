@@ -43,7 +43,7 @@ export default function IraqTour() {
               <span className="text-[var(--foreground)]/40 text-sm">Nov 14-27, 2026</span>
             </div>
             <a
-              href="#contact"
+              href="#booking"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[var(--vik-sage-dark)] to-[var(--vik-sage-muted)] text-white font-bold hover:shadow-lg hover:shadow-[var(--vik-glow)] transition-all duration-300 hover:scale-105"
             >
               Inquire About This Tour →

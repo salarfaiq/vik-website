@@ -43,7 +43,7 @@ export default function ZagrosTrail() {
               ))}
             </div>
             <a
-              href="#contact"
+              href="#booking"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[var(--vik-sage-dark)] to-[var(--vik-sage)] text-white font-bold hover:shadow-lg hover:shadow-[var(--vik-glow)] transition-all duration-300 hover:scale-105"
             >
               Reserve Your Spot →
