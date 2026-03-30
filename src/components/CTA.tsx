@@ -8,17 +8,17 @@ export default function CTA() {
     <section id="contact" className="py-24 relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[500px] h-[500px] bg-[var(--vik-forest)]/5 rounded-full blur-[120px]" />
+        <div className="w-[500px] h-[500px] bg-[var(--vik-storm)]/5 rounded-full blur-[120px]" />
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <ScrollReveal>
-          <div className="glass-card rounded-3xl p-8 sm:p-12 text-center border border-[var(--vik-forest-light)]/10 zagros-border">
+          <div className="glass-card rounded-3xl p-8 sm:p-12 text-center border border-[var(--vik-storm-light)]/10 zagros-border">
             <div className="pt-4" />
 
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
               Ready to Walk Where{" "}
-              <span className="text-gradient-gold">Few Have Walked Before?</span>
+              <span className="text-gradient-ember">Few Have Walked Before?</span>
             </h2>
             <p className="text-[var(--foreground)]/45 max-w-lg mx-auto mb-8">
               Whether it&apos;s the 13-day Zagros Trail, a summit push on Halgurd,
@@ -42,7 +42,7 @@ export default function CTA() {
                 href="mailto:info@visitiraqikurdistan.com"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-full border border-[var(--vik-border)] text-[var(--foreground)]/70 font-semibold hover:border-[var(--vik-gold)]/30 hover:text-[var(--vik-gold)] transition-all"
+                className="inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-full border border-[var(--vik-border-storm)] text-[var(--foreground)]/70 font-semibold hover:border-[var(--vik-ember)]/30 hover:text-[var(--vik-ember)] transition-all"
               >
                 Email Us
               </motion.a>

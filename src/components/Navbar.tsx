@@ -16,15 +16,15 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-[var(--vik-border-forest)]">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-[var(--vik-border-storm)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[var(--vik-forest)] to-[var(--vik-forest-deep)] border border-[var(--vik-gold)]/30 flex items-center justify-center">
-              <span className="text-[var(--vik-gold)] font-bold text-xs">▲</span>
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[var(--vik-storm)] to-[var(--vik-storm-deep)] border border-[var(--vik-ember)]/30 flex items-center justify-center">
+              <span className="text-[var(--vik-ember)] font-bold text-xs">▲</span>
             </div>
             <div className="flex items-baseline gap-0.5">
-              <span className="text-xl font-bold text-gradient-gold">VIK</span>
+              <span className="text-xl font-bold text-gradient-ember">VIK</span>
               <span className="text-sm font-medium text-[var(--foreground)]/50">urdistan</span>
             </div>
           </a>
@@ -34,14 +34,14 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-[var(--foreground)]/55 hover:text-[var(--vik-gold)] transition-colors duration-200"
+                className="text-sm font-medium text-[var(--foreground)]/55 hover:text-[var(--vik-ember)] transition-colors duration-200"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="#contact"
-              className="px-5 py-2 rounded-full bg-gradient-to-r from-[var(--vik-gold-dark)] to-[var(--vik-gold)] text-[var(--vik-forest-deep)] font-semibold text-sm hover:shadow-lg hover:shadow-[var(--vik-glow)] transition-all duration-300"
+              className="px-5 py-2 rounded-full bg-gradient-to-r from-[var(--vik-ember-dark)] to-[var(--vik-ember)] text-white font-semibold text-sm hover:shadow-lg hover:shadow-[var(--vik-glow)] transition-all duration-300"
             >
               Book Now
             </a>
@@ -62,7 +62,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass-card border-t border-[var(--vik-border-forest)]"
+            className="md:hidden glass-card border-t border-[var(--vik-border-storm)]"
           >
             <div className="px-4 py-4 space-y-3">
               {navLinks.map((link) => (
@@ -70,7 +70,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block text-sm font-medium text-[var(--foreground)]/55 hover:text-[var(--vik-gold)] transition-colors"
+                  className="block text-sm font-medium text-[var(--foreground)]/55 hover:text-[var(--vik-ember)] transition-colors"
                 >
                   {link.label}
                 </a>
@@ -78,7 +78,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setIsOpen(false)}
-                className="block text-center px-5 py-2 rounded-full bg-gradient-to-r from-[var(--vik-gold-dark)] to-[var(--vik-gold)] text-[var(--vik-forest-deep)] font-semibold text-sm"
+                className="block text-center px-5 py-2 rounded-full bg-gradient-to-r from-[var(--vik-ember-dark)] to-[var(--vik-ember)] text-white font-semibold text-sm"
               >
                 Book Now
               </a>

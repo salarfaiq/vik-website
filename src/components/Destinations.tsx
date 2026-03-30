@@ -10,12 +10,12 @@ export default function Destinations() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-[var(--vik-forest-light)] mb-2 tracking-wider uppercase">
+            <p className="text-sm font-semibold text-[var(--vik-glacier)] mb-2 tracking-wider uppercase">
               Beyond the Summit
             </p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
               Hidden Gems of{" "}
-              <span className="text-gradient-gold">Choman</span>
+              <span className="text-gradient-ember">Choman</span>
             </h2>
           </div>
         </ScrollReveal>
@@ -29,7 +29,7 @@ export default function Destinations() {
             </div>
           </ScrollReveal>
           <ScrollReveal direction="left">
-            <div className="text-[var(--vik-sky-light)] text-xs font-semibold tracking-wider mb-2">MIRROR OF THE GODS</div>
+            <div className="text-[var(--vik-storm-bright)] text-xs font-semibold tracking-wider mb-2">MIRROR OF THE GODS</div>
             <h3 className="text-3xl font-extrabold mb-4">Gomi Felaw</h3>
             <span className="inline-block px-3 py-1 diff-moderate rounded-full text-xs font-semibold mb-4">Day Trip | 9km each way</span>
             <p className="text-[var(--foreground)]/45 leading-relaxed mb-4">
@@ -50,9 +50,9 @@ export default function Destinations() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {DESTINATIONS.map((dest, index) => (
             <ScrollReveal key={dest.name} delay={index * 0.08}>
-              <div className="glass-card rounded-2xl p-6 h-full transition-all duration-300 hover:shadow-lg hover:shadow-[var(--vik-glow-forest)] group cursor-default">
+              <div className="glass-card rounded-2xl p-6 h-full transition-all duration-300 hover:shadow-lg hover:shadow-[var(--vik-glow-storm)] group cursor-default">
                 <div className="text-3xl mb-4">{dest.icon}</div>
-                <h4 className="text-lg font-bold mb-2 group-hover:text-[var(--vik-gold)] transition-colors">
+                <h4 className="text-lg font-bold mb-2 group-hover:text-[var(--vik-ember)] transition-colors">
                   {dest.name}
                 </h4>
                 <p className="text-sm text-[var(--foreground)]/45 leading-relaxed mb-3">

@@ -1,59 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  /* VIK Mountain palette — deep forest greens + warm gold + terra cotta */
-  --background: #060E12;
-  --foreground: #E8E4D9;
+  /* Storm & Ember — mountain dusk slate + campfire copper + glacier calm */
+  --background: #0B1215;
+  --foreground: #E2DED6;
 
-  /* Gold — warm tent glow, hospitality, Kurdish heritage */
-  --vik-gold: #C9A84E;
-  --vik-gold-light: #DFC47A;
-  --vik-gold-dark: #947126;
-  --vik-gold-muted: #8B7B4A;
+  /* Ember — burnt copper, campfire warmth, Kurdish hospitality */
+  --vik-ember: #D4654A;
+  --vik-ember-light: #E8836B;
+  --vik-ember-dark: #B84E36;
+  --vik-ember-muted: #A0604E;
+  --vik-ember-glow: #D4654A;
 
-  /* Forest — Zagros mountain greens */
-  --vik-forest: #1A4332;
-  --vik-forest-light: #22C55E;
-  --vik-forest-deep: #0A2E1A;
-  --vik-forest-bright: #4ADE80;
-  --vik-forest-mid: #166534;
+  /* Storm — deep slate blue, mountain dusk sky, quiet power */
+  --vik-storm: #2C3E50;
+  --vik-storm-light: #4A6A7A;
+  --vik-storm-deep: #152029;
+  --vik-storm-bright: #6B8FA3;
+  --vik-storm-mid: #34495E;
 
-  /* Terra — warm terracotta, fire, Nawroz */
-  --vik-terra: #E76F51;
-  --vik-terra-light: #F4845F;
-  --vik-terra-dark: #D4603F;
+  /* Glacier — cool blue calm, snow melt, high altitude */
+  --vik-glacier: #8EACBB;
+  --vik-glacier-light: #B0CCD8;
+  --vik-glacier-dark: #6B8D9E;
+  --vik-glacier-muted: #7A9AAB;
 
-  /* Blue — mountain sky accent */
-  --vik-sky: #1E4F8F;
-  --vik-sky-light: #3B7DD8;
+  /* Warm — soft warm tones for highlights */
+  --vik-warm: #C9A87C;
+  --vik-warm-light: #DFC4A0;
 
-  /* Surface & cards — forest-tinted darks */
-  --vik-card: #0C1A1E;
-  --vik-card-hover: #112A24;
-  --vik-surface: #0A1618;
+  /* Surface & cards — storm-tinted darks */
+  --vik-card: #0E1A20;
+  --vik-card-hover: #152830;
+  --vik-surface: #0C1519;
 
-  /* Borders & glows — gold-tinted */
-  --vik-border: rgba(201, 168, 78, 0.12);
-  --vik-border-forest: rgba(34, 197, 94, 0.15);
-  --vik-glow: rgba(201, 168, 78, 0.25);
-  --vik-glow-forest: rgba(34, 197, 94, 0.2);
+  /* Borders & glows */
+  --vik-border: rgba(212, 101, 74, 0.10);
+  --vik-border-storm: rgba(107, 143, 163, 0.12);
+  --vik-glow: rgba(212, 101, 74, 0.20);
+  --vik-glow-storm: rgba(142, 172, 187, 0.15);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-gold: var(--vik-gold);
-  --color-gold-light: var(--vik-gold-light);
-  --color-gold-dark: var(--vik-gold-dark);
-  --color-forest: var(--vik-forest);
-  --color-forest-light: var(--vik-forest-light);
-  --color-forest-deep: var(--vik-forest-deep);
-  --color-forest-bright: var(--vik-forest-bright);
-  --color-forest-mid: var(--vik-forest-mid);
-  --color-terra: var(--vik-terra);
-  --color-terra-light: var(--vik-terra-light);
-  --color-sky: var(--vik-sky);
-  --color-sky-light: var(--vik-sky-light);
+  --color-ember: var(--vik-ember);
+  --color-ember-light: var(--vik-ember-light);
+  --color-ember-dark: var(--vik-ember-dark);
+  --color-storm: var(--vik-storm);
+  --color-storm-light: var(--vik-storm-light);
+  --color-storm-deep: var(--vik-storm-deep);
+  --color-storm-bright: var(--vik-storm-bright);
+  --color-storm-mid: var(--vik-storm-mid);
+  --color-glacier: var(--vik-glacier);
+  --color-glacier-light: var(--vik-glacier-light);
+  --color-glacier-dark: var(--vik-glacier-dark);
+  --color-warm: var(--vik-warm);
+  --color-warm-light: var(--vik-warm-light);
   --color-card: var(--vik-card);
   --color-card-hover: var(--vik-card-hover);
   --color-border: var(--vik-border);
@@ -66,31 +69,31 @@ body {
   font-family: var(--font-nunito), sans-serif;
 }
 
-/* Scrollbar — forest-tinted */
+/* Scrollbar — storm-tinted */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--vik-forest-deep); }
-::-webkit-scrollbar-thumb { background: var(--vik-forest); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--vik-gold-dark); }
+::-webkit-scrollbar-track { background: var(--vik-storm-deep); }
+::-webkit-scrollbar-thumb { background: var(--vik-storm); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--vik-ember-muted); }
 
-/* Gold gradient text */
-.text-gradient-gold {
-  background: linear-gradient(135deg, var(--vik-gold-light), var(--vik-gold), var(--vik-gold-dark));
+/* Ember gradient text — warm campfire glow */
+.text-gradient-ember {
+  background: linear-gradient(135deg, var(--vik-ember-light), var(--vik-ember), var(--vik-ember-dark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Forest gradient text */
-.text-gradient-forest {
-  background: linear-gradient(135deg, var(--vik-forest-bright), var(--vik-forest-light), var(--vik-forest));
+/* Glacier gradient text — cool calm */
+.text-gradient-glacier {
+  background: linear-gradient(135deg, var(--vik-glacier-light), var(--vik-glacier), var(--vik-glacier-dark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Terra gradient text */
-.text-gradient-terra {
-  background: linear-gradient(135deg, var(--vik-terra-light), var(--vik-terra), var(--vik-terra-dark));
+/* Warm gradient text — subtle warmth */
+.text-gradient-warm {
+  background: linear-gradient(135deg, var(--vik-warm-light), var(--vik-warm), var(--vik-ember-muted));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -109,43 +112,43 @@ body {
   height: 3px;
   background: repeating-linear-gradient(
     90deg,
-    var(--vik-gold) 0px,
-    var(--vik-gold) 12px,
-    var(--vik-forest) 12px,
-    var(--vik-forest) 16px
+    var(--vik-ember) 0px,
+    var(--vik-ember) 12px,
+    var(--vik-storm) 12px,
+    var(--vik-storm) 16px
   );
 }
 
 /* Glow effects */
-.glow-gold {
-  box-shadow: 0 0 20px var(--vik-glow), 0 0 40px rgba(201, 168, 78, 0.08);
+.glow-ember {
+  box-shadow: 0 0 20px var(--vik-glow), 0 0 40px rgba(212, 101, 74, 0.08);
 }
 
-.glow-forest {
-  box-shadow: 0 0 20px var(--vik-glow-forest), 0 0 40px rgba(34, 197, 94, 0.06);
+.glow-storm {
+  box-shadow: 0 0 20px var(--vik-glow-storm), 0 0 40px rgba(142, 172, 187, 0.06);
 }
 
-/* Card — forest-tinted glass */
+/* Card — storm-tinted glass */
 .glass-card {
-  background: rgba(12, 26, 30, 0.85);
+  background: rgba(14, 26, 32, 0.85);
   backdrop-filter: blur(16px);
-  border: 1px solid var(--vik-border);
+  border: 1px solid var(--vik-border-storm);
 }
 .glass-card:hover {
-  border-color: rgba(201, 168, 78, 0.2);
+  border-color: rgba(212, 101, 74, 0.18);
 }
 
-/* Zagros divider — gold + forest pattern */
+/* Zagros divider — ember + storm pattern */
 .zagros-divider {
   height: 3px;
   background: linear-gradient(
     90deg,
     transparent,
-    var(--vik-forest),
-    var(--vik-gold-dark),
-    var(--vik-gold),
-    var(--vik-gold-dark),
-    var(--vik-forest),
+    var(--vik-storm),
+    var(--vik-ember-dark),
+    var(--vik-ember),
+    var(--vik-ember-dark),
+    var(--vik-storm),
     transparent
   );
 }
@@ -156,9 +159,9 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    var(--vik-forest-light),
-    var(--vik-gold-muted),
-    var(--vik-forest-light),
+    var(--vik-storm-light),
+    var(--vik-glacier-dark),
+    var(--vik-storm-light),
     transparent
   );
 }
@@ -182,7 +185,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(34, 197, 94, 0.06) 50%,
+    rgba(142, 172, 187, 0.05) 50%,
     transparent 100%
   );
   background-size: 200% 100%;
@@ -199,18 +202,18 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(201, 168, 78, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(201, 168, 78, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(212, 101, 74, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(212, 101, 74, 0.5); }
 }
 
 /* Mountain texture background */
 .relief-pattern {
   background-image:
-    radial-gradient(circle at 20% 30%, rgba(34, 197, 94, 0.04) 0px, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(201, 168, 78, 0.03) 0px, transparent 50%);
+    radial-gradient(circle at 20% 30%, rgba(44, 62, 80, 0.06) 0px, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(212, 101, 74, 0.03) 0px, transparent 50%);
 }
 
-/* Zagros accent — decorative gold line at section bottom */
+/* Zagros accent — decorative ember line */
 .zagros-accent {
   position: relative;
 }
@@ -222,14 +225,14 @@ body {
   transform: translateX(-50%);
   width: 120px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--vik-gold), transparent);
+  background: linear-gradient(90deg, transparent, var(--vik-ember), transparent);
 }
 
 /* Difficulty badges */
-.diff-easy { background: rgba(34,197,94,0.15); color: var(--vik-forest-bright); border: 1px solid rgba(34,197,94,0.25); }
-.diff-moderate { background: rgba(250,204,21,0.15); color: #fde047; border: 1px solid rgba(250,204,21,0.25); }
-.diff-hard { background: rgba(231,111,81,0.15); color: var(--vik-terra-light); border: 1px solid rgba(231,111,81,0.25); }
-.diff-expert { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.25); }
+.diff-easy { background: rgba(142,172,187,0.15); color: var(--vik-glacier); border: 1px solid rgba(142,172,187,0.25); }
+.diff-moderate { background: rgba(201,168,124,0.15); color: var(--vik-warm-light); border: 1px solid rgba(201,168,124,0.25); }
+.diff-hard { background: rgba(212,101,74,0.15); color: var(--vik-ember-light); border: 1px solid rgba(212,101,74,0.25); }
+.diff-expert { background: rgba(220,60,40,0.15); color: #E8534A; border: 1px solid rgba(220,60,40,0.25); }
 
 /* Card image hover */
 .card-img { transition: transform 0.7s cubic-bezier(0.16,1,0.3,1); }

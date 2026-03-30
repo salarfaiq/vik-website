@@ -14,11 +14,11 @@ export default function FAQ() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-[var(--vik-forest-light)] mb-2 tracking-wider uppercase">
+            <p className="text-sm font-semibold text-[var(--vik-glacier)] mb-2 tracking-wider uppercase">
               FAQ
             </p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
-              Got <span className="text-gradient-gold">Questions?</span>
+              Got <span className="text-gradient-ember">Questions?</span>
             </h2>
           </div>
         </ScrollReveal>
@@ -36,7 +36,7 @@ export default function FAQ() {
                     animate={{ rotate: openIndex === index ? 180 : 0 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <ChevronDown size={18} className="text-[var(--vik-gold)] shrink-0" />
+                    <ChevronDown size={18} className="text-[var(--vik-ember)] shrink-0" />
                   </motion.div>
                 </button>
                 <AnimatePresence>
