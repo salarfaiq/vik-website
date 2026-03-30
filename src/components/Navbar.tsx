@@ -40,7 +40,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="#booking"
               className="px-5 py-2 rounded-full bg-gradient-to-r from-[var(--vik-sage-dark)] to-[var(--vik-sage)] text-white font-semibold text-sm hover:shadow-lg hover:shadow-[var(--vik-glow)] transition-all duration-300"
             >
               Book Now
@@ -76,7 +76,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="#booking"
                 onClick={() => setIsOpen(false)}
                 className="block text-center px-5 py-2 rounded-full bg-gradient-to-r from-[var(--vik-sage-dark)] to-[var(--vik-sage)] text-white font-semibold text-sm"
               >

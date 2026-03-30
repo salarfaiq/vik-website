@@ -10,6 +10,7 @@ import IraqTour from "@/components/IraqTour";
 import WhyVIK from "@/components/WhyVIK";
 import Gallery from "@/components/Gallery";
 import FAQ from "@/components/FAQ";
+import BookingForm from "@/components/BookingForm";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -39,6 +40,8 @@ export default function Home() {
         <Gallery />
         <div className="ridge-divider max-w-4xl mx-auto" />
         <FAQ />
+        <div className="zagros-divider max-w-5xl mx-auto" />
+        <BookingForm />
         <CTA />
       </main>
       <Footer />
