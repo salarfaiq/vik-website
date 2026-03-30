@@ -9,12 +9,12 @@ export default function WhyVIK() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-[var(--vik-ember)] mb-2 tracking-wider uppercase">
+            <p className="text-sm font-semibold text-[var(--vik-sage)] mb-2 tracking-wider uppercase">
               Why Travel With Us
             </p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
               More Than a{" "}
-              <span className="text-gradient-ember">Tour Company</span>
+              <span className="text-gradient-sage">Tour Company</span>
             </h2>
           </div>
         </ScrollReveal>
@@ -24,7 +24,7 @@ export default function WhyVIK() {
             <ScrollReveal key={item.title} delay={index * 0.08}>
               <div className="glass-card rounded-2xl p-6 text-center h-full transition-all duration-300 hover:shadow-lg hover:shadow-[var(--vik-glow)] group cursor-default">
                 <div className="text-3xl mb-4">{item.icon}</div>
-                <h4 className="font-bold mb-2 group-hover:text-[var(--vik-ember)] transition-colors">
+                <h4 className="font-bold mb-2 group-hover:text-[var(--vik-sage)] transition-colors">
                   {item.title}
                 </h4>
                 <p className="text-sm text-[var(--foreground)]/45 leading-relaxed">

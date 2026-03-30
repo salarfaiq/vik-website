@@ -15,7 +15,7 @@ export default function Destinations() {
             </p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
               Hidden Gems of{" "}
-              <span className="text-gradient-ember">Choman</span>
+              <span className="text-gradient-sage">Choman</span>
             </h2>
           </div>
         </ScrollReveal>
@@ -52,7 +52,7 @@ export default function Destinations() {
             <ScrollReveal key={dest.name} delay={index * 0.08}>
               <div className="glass-card rounded-2xl p-6 h-full transition-all duration-300 hover:shadow-lg hover:shadow-[var(--vik-glow-storm)] group cursor-default">
                 <div className="text-3xl mb-4">{dest.icon}</div>
-                <h4 className="text-lg font-bold mb-2 group-hover:text-[var(--vik-ember)] transition-colors">
+                <h4 className="text-lg font-bold mb-2 group-hover:text-[var(--vik-sage)] transition-colors">
                   {dest.name}
                 </h4>
                 <p className="text-sm text-[var(--foreground)]/45 leading-relaxed mb-3">

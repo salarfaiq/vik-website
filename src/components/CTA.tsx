@@ -18,7 +18,7 @@ export default function CTA() {
 
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
               Ready to Walk Where{" "}
-              <span className="text-gradient-ember">Few Have Walked Before?</span>
+              <span className="text-gradient-sage">Few Have Walked Before?</span>
             </h2>
             <p className="text-[var(--foreground)]/45 max-w-lg mx-auto mb-8">
               Whether it&apos;s the 13-day Zagros Trail, a summit push on Halgurd,
@@ -42,7 +42,7 @@ export default function CTA() {
                 href="mailto:info@visitiraqikurdistan.com"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-full border border-[var(--vik-border-storm)] text-[var(--foreground)]/70 font-semibold hover:border-[var(--vik-ember)]/30 hover:text-[var(--vik-ember)] transition-all"
+                className="inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-full border border-[var(--vik-border-storm)] text-[var(--foreground)]/70 font-semibold hover:border-[var(--vik-sage)]/30 hover:text-[var(--vik-sage)] transition-all"
               >
                 Email Us
               </motion.a>

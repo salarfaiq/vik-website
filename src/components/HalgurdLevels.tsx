@@ -15,7 +15,7 @@ export default function HalgurdLevels() {
             </p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
               Iraq&apos;s Tallest Peak,{" "}
-              <span className="text-gradient-ember">Four Ways to Experience It</span>
+              <span className="text-gradient-sage">Four Ways to Experience It</span>
             </h2>
             <p className="text-[var(--foreground)]/45 max-w-xl mx-auto">
               Whether you&apos;re a seasoned mountaineer or prefer a gentle morning walk,
@@ -28,7 +28,7 @@ export default function HalgurdLevels() {
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {HALGURD_LEVELS.map((level, index) => (
             <ScrollReveal key={level.name} delay={index * 0.1}>
-              <div className="glass-card rounded-2xl overflow-hidden group hover:border-[var(--vik-ember)]/20 transition-all duration-300 hover:shadow-lg hover:shadow-[var(--vik-glow-storm)] h-full">
+              <div className="glass-card rounded-2xl overflow-hidden group hover:border-[var(--vik-sage)]/20 transition-all duration-300 hover:shadow-lg hover:shadow-[var(--vik-glow-storm)] h-full">
                 <div className="relative h-48 overflow-hidden">
                   <Image src={level.image} alt={level.name} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
@@ -40,7 +40,7 @@ export default function HalgurdLevels() {
                   <div className={`text-xs font-semibold tracking-wider mb-1 ${level.tagColor}`}>
                     {level.tag}
                   </div>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-[var(--vik-ember)] transition-colors">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-[var(--vik-sage)] transition-colors">
                     {level.name}
                   </h3>
                   <p className="text-sm text-[var(--foreground)]/45 leading-relaxed mb-4">

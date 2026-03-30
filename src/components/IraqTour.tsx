@@ -44,7 +44,7 @@ export default function IraqTour() {
             </div>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[var(--vik-ember-dark)] to-[var(--vik-ember-muted)] text-white font-bold hover:shadow-lg hover:shadow-[var(--vik-glow)] transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[var(--vik-sage-dark)] to-[var(--vik-sage-muted)] text-white font-bold hover:shadow-lg hover:shadow-[var(--vik-glow)] transition-all duration-300 hover:scale-105"
             >
               Inquire About This Tour →
             </a>

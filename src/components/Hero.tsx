@@ -31,12 +31,12 @@ export default function Hero() {
       />
 
       {/* Top ember highlight line */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[var(--vik-ember)] to-transparent opacity-40" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[var(--vik-sage)] to-transparent opacity-40" />
 
       {/* Glowing orbs */}
       <div className="absolute top-1/4 left-[15%] w-80 h-80 bg-[var(--vik-storm)]/10 rounded-full blur-[120px]" />
       <div className="absolute bottom-1/3 right-[20%] w-64 h-64 bg-[var(--vik-glacier)]/5 rounded-full blur-[100px]" />
-      <div className="absolute top-1/2 right-1/3 w-32 h-32 bg-[var(--vik-ember)]/5 rounded-full blur-[80px]" />
+      <div className="absolute top-1/2 right-1/3 w-32 h-32 bg-[var(--vik-sage)]/5 rounded-full blur-[80px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
@@ -60,7 +60,7 @@ export default function Hero() {
           className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight mb-6"
         >
           Where Mountains{" "}
-          <span className="text-gradient-ember">Meet the Sky</span>
+          <span className="text-gradient-sage">Meet the Sky</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -84,7 +84,7 @@ export default function Hero() {
         >
           <a
             href="#adventures"
-            className="px-8 py-3.5 rounded-full bg-gradient-to-r from-[var(--vik-ember-dark)] to-[var(--vik-ember)] text-white font-bold text-base hover:shadow-lg hover:shadow-[var(--vik-glow)] transition-all duration-300 hover:scale-105"
+            className="px-8 py-3.5 rounded-full bg-gradient-to-r from-[var(--vik-sage-dark)] to-[var(--vik-sage)] text-white font-bold text-base hover:shadow-lg hover:shadow-[var(--vik-glow)] transition-all duration-300 hover:scale-105"
           >
             Explore Adventures
           </a>
@@ -103,7 +103,7 @@ export default function Hero() {
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             className="absolute -right-4 sm:right-8 top-0 glass-card rounded-xl px-3 py-2"
           >
-            <p className="text-[10px] text-[var(--vik-ember)]">🏔️ Highest Peak</p>
+            <p className="text-[10px] text-[var(--vik-sage)]">🏔️ Highest Peak</p>
             <p className="text-xs font-bold">3,607m</p>
           </motion.div>
 

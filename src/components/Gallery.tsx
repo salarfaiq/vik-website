@@ -23,7 +23,7 @@ export default function Gallery() {
             </p>
             <h2 className="text-3xl sm:text-4xl font-extrabold">
               Moments from the{" "}
-              <span className="text-gradient-ember">Mountains</span>
+              <span className="text-gradient-sage">Mountains</span>
             </h2>
           </div>
         </ScrollReveal>

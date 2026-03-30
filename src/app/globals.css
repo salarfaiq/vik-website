@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  /* Storm & Ember — mountain dusk slate + campfire copper + glacier calm */
+  /* Storm & Sage — mountain dusk slate + Zagros valley green + glacier calm */
   --background: #0B1215;
   --foreground: #E2DED6;
 
-  /* Ember — burnt copper, campfire warmth, Kurdish hospitality */
-  --vik-ember: #D4654A;
-  --vik-ember-light: #E8836B;
-  --vik-ember-dark: #B84E36;
-  --vik-ember-muted: #A0604E;
-  --vik-ember-glow: #D4654A;
+  /* Sage — natural, grounded, Zagros valley greens */
+  --vik-sage: #7BA68C;
+  --vik-sage-light: #9DC4AA;
+  --vik-sage-dark: #5C8A6E;
+  --vik-sage-muted: #6A9478;
+  --vik-sage-deep: #4A7560;
 
   /* Storm — deep slate blue, mountain dusk sky, quiet power */
   --vik-storm: #2C3E50;
@@ -25,7 +25,7 @@
   --vik-glacier-dark: #6B8D9E;
   --vik-glacier-muted: #7A9AAB;
 
-  /* Warm — soft warm tones for highlights */
+  /* Warm — soft warm tones for secondary highlights */
   --vik-warm: #C9A87C;
   --vik-warm-light: #DFC4A0;
 
@@ -35,18 +35,18 @@
   --vik-surface: #0C1519;
 
   /* Borders & glows */
-  --vik-border: rgba(212, 101, 74, 0.10);
+  --vik-border: rgba(123, 166, 140, 0.10);
   --vik-border-storm: rgba(107, 143, 163, 0.12);
-  --vik-glow: rgba(212, 101, 74, 0.20);
+  --vik-glow: rgba(123, 166, 140, 0.20);
   --vik-glow-storm: rgba(142, 172, 187, 0.15);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-ember: var(--vik-ember);
-  --color-ember-light: var(--vik-ember-light);
-  --color-ember-dark: var(--vik-ember-dark);
+  --color-sage: var(--vik-sage);
+  --color-sage-light: var(--vik-sage-light);
+  --color-sage-dark: var(--vik-sage-dark);
   --color-storm: var(--vik-storm);
   --color-storm-light: var(--vik-storm-light);
   --color-storm-deep: var(--vik-storm-deep);
@@ -69,15 +69,15 @@ body {
   font-family: var(--font-nunito), sans-serif;
 }
 
-/* Scrollbar — storm-tinted */
+/* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--vik-storm-deep); }
 ::-webkit-scrollbar-thumb { background: var(--vik-storm); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--vik-ember-muted); }
+::-webkit-scrollbar-thumb:hover { background: var(--vik-sage-muted); }
 
-/* Ember gradient text — warm campfire glow */
-.text-gradient-ember {
-  background: linear-gradient(135deg, var(--vik-ember-light), var(--vik-ember), var(--vik-ember-dark));
+/* Sage gradient text — natural valley green */
+.text-gradient-sage {
+  background: linear-gradient(135deg, var(--vik-sage-light), var(--vik-sage), var(--vik-sage-dark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -93,7 +93,7 @@ body {
 
 /* Warm gradient text — subtle warmth */
 .text-gradient-warm {
-  background: linear-gradient(135deg, var(--vik-warm-light), var(--vik-warm), var(--vik-ember-muted));
+  background: linear-gradient(135deg, var(--vik-warm-light), var(--vik-warm), var(--vik-sage-muted));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -112,16 +112,16 @@ body {
   height: 3px;
   background: repeating-linear-gradient(
     90deg,
-    var(--vik-ember) 0px,
-    var(--vik-ember) 12px,
+    var(--vik-sage) 0px,
+    var(--vik-sage) 12px,
     var(--vik-storm) 12px,
     var(--vik-storm) 16px
   );
 }
 
 /* Glow effects */
-.glow-ember {
-  box-shadow: 0 0 20px var(--vik-glow), 0 0 40px rgba(212, 101, 74, 0.08);
+.glow-sage {
+  box-shadow: 0 0 20px var(--vik-glow), 0 0 40px rgba(123, 166, 140, 0.08);
 }
 
 .glow-storm {
@@ -135,19 +135,19 @@ body {
   border: 1px solid var(--vik-border-storm);
 }
 .glass-card:hover {
-  border-color: rgba(212, 101, 74, 0.18);
+  border-color: rgba(123, 166, 140, 0.18);
 }
 
-/* Zagros divider — ember + storm pattern */
+/* Zagros divider — sage + storm pattern */
 .zagros-divider {
   height: 3px;
   background: linear-gradient(
     90deg,
     transparent,
     var(--vik-storm),
-    var(--vik-ember-dark),
-    var(--vik-ember),
-    var(--vik-ember-dark),
+    var(--vik-sage-dark),
+    var(--vik-sage),
+    var(--vik-sage-dark),
     var(--vik-storm),
     transparent
   );
@@ -202,18 +202,18 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(212, 101, 74, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(212, 101, 74, 0.5); }
+  0%, 100% { box-shadow: 0 0 20px rgba(123, 166, 140, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(123, 166, 140, 0.5); }
 }
 
 /* Mountain texture background */
 .relief-pattern {
   background-image:
     radial-gradient(circle at 20% 30%, rgba(44, 62, 80, 0.06) 0px, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(212, 101, 74, 0.03) 0px, transparent 50%);
+    radial-gradient(circle at 80% 70%, rgba(123, 166, 140, 0.03) 0px, transparent 50%);
 }
 
-/* Zagros accent — decorative ember line */
+/* Zagros accent — decorative sage line */
 .zagros-accent {
   position: relative;
 }
@@ -225,14 +225,14 @@ body {
   transform: translateX(-50%);
   width: 120px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--vik-ember), transparent);
+  background: linear-gradient(90deg, transparent, var(--vik-sage), transparent);
 }
 
 /* Difficulty badges */
 .diff-easy { background: rgba(142,172,187,0.15); color: var(--vik-glacier); border: 1px solid rgba(142,172,187,0.25); }
 .diff-moderate { background: rgba(201,168,124,0.15); color: var(--vik-warm-light); border: 1px solid rgba(201,168,124,0.25); }
-.diff-hard { background: rgba(212,101,74,0.15); color: var(--vik-ember-light); border: 1px solid rgba(212,101,74,0.25); }
-.diff-expert { background: rgba(220,60,40,0.15); color: #E8534A; border: 1px solid rgba(220,60,40,0.25); }
+.diff-hard { background: rgba(123,166,140,0.15); color: var(--vik-sage-light); border: 1px solid rgba(123,166,140,0.25); }
+.diff-expert { background: rgba(192,120,122,0.15); color: #C4787A; border: 1px solid rgba(192,120,122,0.25); }
 
 /* Card image hover */
 .card-img { transition: transform 0.7s cubic-bezier(0.16,1,0.3,1); }

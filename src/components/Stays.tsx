@@ -27,20 +27,20 @@ export default function Stays() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {STAYS.map((stay, index) => (
             <ScrollReveal key={stay.name} delay={index * 0.1}>
-              <div className="glass-card rounded-2xl overflow-hidden group hover:border-[var(--vik-ember)]/20 transition-all duration-300 h-full">
+              <div className="glass-card rounded-2xl overflow-hidden group hover:border-[var(--vik-sage)]/20 transition-all duration-300 h-full">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={stay.image} alt={stay.name} fill className="card-img object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                 </div>
                 <div className="p-6">
-                  <h4 className="text-lg font-bold mb-2 group-hover:text-[var(--vik-ember)] transition-colors">
+                  <h4 className="text-lg font-bold mb-2 group-hover:text-[var(--vik-sage)] transition-colors">
                     {stay.name}
                   </h4>
                   <p className="text-sm text-[var(--foreground)]/45 leading-relaxed mb-4">
                     {stay.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-[var(--vik-ember)] font-bold">
+                    <span className="text-[var(--vik-sage)] font-bold">
                       {stay.price}<span className="text-[var(--foreground)]/30 font-normal text-sm">{stay.priceNote}</span>
                     </span>
                     <span className="text-[var(--foreground)]/25 text-xs">{stay.location}</span>
