@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Google Apps Script Web App URL for Google Sheets
 const SHEET_URL = process.env.GOOGLE_SHEET_URL || "";
 const WHATSAPP_NOTIFY_NUMBER = "9647501116377";
 
@@ -8,25 +7,35 @@ export async function POST(request: NextRequest) {
   try {
     const data = await request.json();
 
-    // 1. Forward to Google Sheets via Apps Script
+    // Log the booking (always visible in Vercel logs)
+    console.log("=== NEW BOOKING ===");
+    console.log(JSON.stringify(data, null, 2));
+    console.log("===================");
+
+    // Forward to Google Sheets via Apps Script
+    // Use redirect: "follow" and send as form data to handle Google's 302 redirect
     if (SHEET_URL) {
       try {
-        await fetch(SHEET_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
+        // Google Apps Script redirects POST to GET on 302, losing the body.
+        // Workaround: send data as URL params on a GET request instead.
+        const params = new URLSearchParams();
+        for (const [key, value] of Object.entries(data)) {
+          params.append(key, String(value));
+        }
+
+        const response = await fetch(`${SHEET_URL}?${params.toString()}`, {
+          method: "GET",
+          redirect: "follow",
         });
+
+        const text = await response.text();
+        console.log("Sheet response:", response.status, text.substring(0, 200));
       } catch (sheetError) {
         console.error("Google Sheets error:", sheetError);
       }
     }
 
-    // 2. Log the booking (visible in Vercel logs)
-    console.log("=== NEW BOOKING ===");
-    console.log(JSON.stringify(data, null, 2));
-    console.log("===================");
-
-    // 3. Build WhatsApp notification URL for the guide
+    // Build WhatsApp notification URL
     const waMessage = encodeURIComponent(
       `New VIK Booking!\n\n` +
       `Adventure: ${data.adventure}\n` +
@@ -43,7 +52,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       message: "Booking received",
-      // Return the WhatsApp URL so the admin dashboard can use it
       whatsappUrl: `https://wa.me/${WHATSAPP_NOTIFY_NUMBER}?text=${waMessage}`,
     });
   } catch (error) {
